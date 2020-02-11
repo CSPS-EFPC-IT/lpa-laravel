@@ -1,0 +1,24 @@
+.el-pagination {
+  padding: 20px;
+  background-color: $--color-white;
+  border: 1px solid $--border-color-lighter;
+  border-top: none;
+}
+
+.el-pagination .el-pager li:not(.active):hover {
+  background-color: #e8e8e8;
+  color: $--color-black !important;
+}
+
+.el-pagination__total {
+  float: left;
+}
+
+.el-pagination__sizes {
+  float: right;
+  margin-right: 0px;
+}
+
+.sc-table .pagination-wrap {
+  margin-top: 0 !important;
+}

@@ -1,0 +1,33 @@
+.el-table {
+  border: $--table-border;
+  border-bottom: 0;
+  thead {
+    // make sure we see the contrast between headers and data
+    color: inherit;
+  }
+  .cell {
+    word-break: normal;
+  }
+  .el-table__row {
+    cursor: pointer;
+  }
+  th, td {
+    padding: 10px;
+  }
+  tr a {
+    display: flex;
+    justify-content: flex-start;
+  }
+  tr td.is-link {
+    .cell, .cell a {
+      // make sure the link takes full place in the cell
+      margin: -10px;
+      padding: 10px;
+    }
+    .cell a {
+      // compensate for the original padding left-right of the cell
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}

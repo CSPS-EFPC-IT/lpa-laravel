@@ -1,0 +1,7 @@
+// accessibility contrast issues fix
+.el-tag {
+  color: $--color-text-regular;
+  &__close.el-icon-close {
+    background-color: #70757f !important;
+  }
+}

@@ -1,0 +1,51 @@
+.el-form {
+  display: flex;
+  flex-direction: column;
+  .el-autocomplete,
+  .el-select {
+    width: 100%;
+  }
+  .el-cascader {
+    width: 35%;
+  }
+  .el-autocomplete-suggestion.name-autocomplete {
+    li {
+      line-height: 20px;
+      padding: 7px 10px;
+
+      .autocomplete-popper-inner-wrap {
+        overflow: hidden;
+        .value {
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+        .link {
+          font-size: 12px;
+          color: #b4b4b4;
+        }
+      }
+    }
+  }
+}
+
+// this fixes a color contrast issue when the radio buttons are disabled ans selected
+.el-radio-button__orig-radio:disabled:checked + .el-radio-button__inner {
+  color: $--color-white;
+}
+// fixes the color of the checkmark in a disabled checked checkbox
+.el-checkbox__input.is-disabled.is-checked .el-checkbox__inner:after {
+  border-color: $--color-white;
+}
+.el-checkbox__input.is-disabled.is-indeterminate .el-checkbox__inner:before {
+  background: #fff;
+}
+
+// make error border availlable not only on form-items like ElementUI does,
+// but on anything that has .is-error .el-{control}__inner
+form .is-error .el-input__inner,
+form .is-error .el-input__inner:focus,
+form .is-error .el-textarea__inner,
+form .is-error .el-textarea__inner:focus,
+form .is-error .el-radio-button__inner {
+  border-color: $--color-danger !important;
+}

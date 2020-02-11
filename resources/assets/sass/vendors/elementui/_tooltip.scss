@@ -1,0 +1,10 @@
+.el-tooltip__popper {
+  // make sure the popover doesn't stay visible when we hover on it
+  pointer-events: none;
+  a {
+    color: $--color-primary-light-8;
+    &:hover {
+      color: $--color-white;
+    }
+  }
+}

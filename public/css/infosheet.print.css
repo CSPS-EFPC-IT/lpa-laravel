@@ -1,0 +1,35 @@
+@page {
+    size: auto;
+    margin-top: 10mm;
+}
+.print {
+    display: none;
+}
+.el-card__header .toggle {
+    display: none;
+}
+.el-card.hide {
+    display: none;
+}
+.no-break,
+.form-section,
+.el-table-wrap {
+    page-break-inside: avoid;
+}
+.el-table .link {
+    display: none;
+}
+.el-table {
+    border: 1px;
+}
+table.el-table__header,
+table.el-table__body {
+    /* make sure that the table has correct borders */
+    border: 1px solid #d1d2e9;
+}
+table.el-table__header {
+    border-bottom: 0;
+}
+table.el-table__body {
+    border-top: 0;
+}

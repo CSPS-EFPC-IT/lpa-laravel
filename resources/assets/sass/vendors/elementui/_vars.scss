@@ -1,0 +1,24 @@
+// ElementUI variable overrides
+
+/* Colors
+-------------------------- */
+$--color-primary: #524f74;
+$--color-white:   #fff;
+$--color-black:   #111;
+$--color-text-primary: $--color-primary;
+$--color-text-regular: #606266;
+
+$--disabled-color-base: $--color-text-regular;
+
+/* Border
+-------------------------- */
+$--border-color-base: #cccde7;
+$--border-color-light: mix($--border-color-base, $--color-white, 85%);
+$--border-color-lighter: mix($--border-color-base, $--color-white, 90%);
+$--border-color-extra-light: mix($--border-color-base, $--color-white, 95%);
+
+/* z-index
+-------------------------- */
+$--font-path: '../../node_modules/element-ui/lib/theme-chalk/fonts';
+
+@import './element-variables';

@@ -1,0 +1,56 @@
+// Styling in order to replicate the MessageBox component's styling
+.el-dialog__wrapper {
+  text-align: center;
+  &:after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 0;
+    vertical-align: middle;
+  }
+  .el-dialog {
+    display: inline-block;
+    width: $--msgbox-width;
+    padding-bottom: 10px;
+    vertical-align: middle;
+    background-color: $--color-white;
+    border-radius: $--msgbox-border-radius;
+    border: 1px solid #d1d2e9;
+    font-size: $--font-size-large;
+    box-shadow: $--box-shadow-light;
+    text-align: left;
+    overflow: hidden;
+    backface-visibility: hidden;
+    // this reset the margins that the el-dialog sets by default
+    margin: 0 !important;
+    &__header {
+      padding: $--msgbox-padding-primary;
+      padding-bottom: 10px;
+    }
+    &__body {
+      position: relative;
+      padding: 10px $--msgbox-padding-primary;
+      word-break: break-word;
+    }
+    &__footer {
+      padding-bottom: 0;
+    }
+    &__status {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: $--notification-icon-size !important;
+      &:before {
+        padding-left: 1px;
+      }
+      &.el-icon-warning {
+        color: $--color-warning;
+      }
+    }
+    .el-dialog__status + .el-dialog__message {
+      // make space for status when there is one
+      padding-left: 36px;
+      padding-right: 12px;
+    }
+  }
+}

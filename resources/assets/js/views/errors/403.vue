@@ -1,0 +1,34 @@
+<template>
+  <div>
+    <el-row type="flex" justify="center" :gutter="18">
+      <el-col :span="18">
+        <h2 v-html="$t('pages.403.title')"></h2>
+      </el-col>
+    </el-row>
+    <el-row type="flex" justify="center" :gutter="18">
+      <el-col class="icon-divider" :span="18">
+        <i class="el-icon el-icon-lpa-owl-403"></i>
+      </el-col>
+    </el-row>
+    <el-row type="flex" justify="center" :gutter="14">
+      <el-col :span="14">
+        <p v-html="$t('pages.403.instruction')"></p>
+        <el-button @click="goToPage({ name: 'home' })"><i class="el-icon-back"></i>{{ $t('base.navigation.back_to_home') }}</el-button>
+      </el-col>
+    </el-row>
+  </div>
+</template>
+
+<script>
+  import Page from '@components/page';
+
+  export default {
+    name: 'forbidden',
+
+    extends: Page
+  };
+</script>
+
+<style lang="scss">
+  @import '~@sass/pages/error';
+</style>
